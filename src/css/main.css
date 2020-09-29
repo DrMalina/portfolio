@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Jost;
+    src: url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+  }
+
+  html {
+    @apply font-sans antialiased bg-gray-100;
+  }
+}
+
+nav {
+  counter-reset: nav;
+}
+
+.nav-item {
+  counter-increment: nav;
+}
+
+.nav-item::before {
+  content: '0' counter(nav) '.';
+  margin-right: 5px;
+  color: #8a3ffc;
+}

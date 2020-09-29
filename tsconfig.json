@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es6", "dom", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "public", ".cache"]
+}
+
+// {
+//   "compilerOptions": {
+//     "baseUrl": "./src",
+//     "module": "esnext",
+//     "target": "es5",
+//     "lib": ["es6", "dom", "esnext.asynciterable"],
+//     "allowSyntheticDefaultImports": true,
+//     "sourceMap": true,
+//     "allowJs": true,
+//     "jsx": "react",
+//     "moduleResolution": "node",
+//     "forceConsistentCasingInFileNames": true,
+//     "noImplicitReturns": true,
+//     "noImplicitThis": true,
+//     "noImplicitAny": true,
+//     "strictNullChecks": true,
+//     "suppressImplicitAnyIndexErrors": true,
+//     "noUnusedLocals": true,
+//     "skipLibCheck": true
+//   },
+//   "exclude": [
+//     "node_modules",
+//     "build",
+//     "scripts",
+//     "acceptance-tests",
+//     "webpack",
+//     "jest",
+//     "src/setupTests.ts"
+//   ],
+//   "include": ["./src/**/*"]
+// }
