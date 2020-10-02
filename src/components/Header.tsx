@@ -1,9 +1,21 @@
 import React from 'react';
+import { useToggle } from '../hooks/useToggle';
+import { Logo } from './Logo';
+import { MenuToggle } from './MenuToggle';
+import { Nav } from './Nav';
 
-interface HeaderProps {
-  text: string;
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useToggle();
+
+  return (
+    <header className="text-gray-800">
+      <div className="container mx-auto p-5">
+        <div className="relative flex items-center">
+          <Logo />
+          <MenuToggle isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          <Nav isMenuOpen={isMenuOpen} />
+        </div>
+      </div>
+    </header>
+  );
 }
-
-export const Header: React.FC<HeaderProps> = ({ text }) => {
-  return <h2>Header here: {text}</h2>;
-};

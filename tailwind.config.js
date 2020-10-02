@@ -18,10 +18,12 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
-      primary: '#8A3FFC',
       black: '#000',
       white: '#fff',
+      primary: {
+        500: '#8B40FC',
+        600: '#8042DF',
+      },
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
