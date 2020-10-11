@@ -20,6 +20,7 @@ module.exports = {
       current: 'currentColor',
       black: '#000',
       white: '#fff',
+      link: '#4C74B9',
       primary: {
         500: '#8B40FC',
         600: '#8042DF',

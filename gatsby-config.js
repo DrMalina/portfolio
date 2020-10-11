@@ -1,8 +1,10 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Maciej Malinowski Portfolio`,
+    description: `Welcome to my personal, front-end developer's portfolio!`,
+    author: `Maciej Malinowski`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,21 +12,30 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets`,
+        path: path.join(__dirname, `src`, `assets`),
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        google: {
-          families: ['Jost:400,500,700'],
-        },
+        fonts: [`Jost:400,500,700`],
+        display: 'swap',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: path.join(__dirname, `src`, `markdown`),
+      },
+    },
+    `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-graphql-codegen`,
+    // }
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
