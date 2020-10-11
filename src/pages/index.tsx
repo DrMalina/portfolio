@@ -1,6 +1,8 @@
 import React from 'react';
+import { AboutMe } from '../components/AboutMe';
 import { Header } from '../components/Header';
 import { HeroSection } from '../components/HeroSection';
+import { Projects } from '../components/Projects';
 
 function HomePage() {
   return (
@@ -9,7 +11,11 @@ function HomePage() {
         Skip to main content
       </a>
       <Header />
-      <HeroSection />
+      <main id="main">
+        <HeroSection />
+        <AboutMe />
+        <Projects />
+      </main>
     </>
   );
 }

@@ -42,7 +42,7 @@ export function Projects() {
         <p className="md:mt-24 mt-12 mx-auto md:max-w-md max-w-sm">
           Here are some of the things I&apos;ve built. If you want to see more examples, or peek
           inside the code,{' '}
-          <Link href="https://github.com/DrMalina" text="visit my Github profile" />
+          <Link href="https://github.com/DrMalina" text="visit my Github profile." />
         </p>
       </header>
       <ul className="md:mt-32 mt-24 md:max-w-full max-w-sm mx-auto grid md:grid-cols-2 grid-cols-none gap-x-20 gap-y-24">
