@@ -4,7 +4,7 @@ import iconRocket from '../assets/rocket.svg';
 
 export function HeroSection() {
   return (
-    <section className="lg:pt-10 md:pt-24 pt-10 text-gray-700" id="home">
+    <section id="home" className="lg:pt-10 md:pt-24 pt-10 text-gray-700">
       <div className="lg:max-w-6xl container mx-auto flex px-5 md:py-24 py-16 md:flex-row flex-col items-center">
         <div className="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 mb-16 items-center text-center">
           <h1 className="sm:text-6xl leading-tight text-5xl mb-4 font-bold text-gray-900">

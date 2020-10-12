@@ -104,7 +104,7 @@ export function SingleProject({ title, body, tags, website, github, img }: Singl
           />
         </ConditionalWrapper>
         <h3 className="text-xl text-gray-800 font-medium mt-5">{title}</h3>
-        <div className="flex-1 leading-relaxed text-sm mt-2">
+        <div className="flex-1 leading-relaxed text-base mt-2">
           <MDXRenderer>{body}</MDXRenderer>
         </div>
         <div className="md:mt-6 mt-10 flex md:flex-no-wrap flex-wrap items-center">

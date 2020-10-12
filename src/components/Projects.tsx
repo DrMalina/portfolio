@@ -34,18 +34,19 @@ export function Projects() {
 
   return (
     <section
-      className="text-gray-700 lg:max-w-5xl container md:mt-24 mt-16
+      id="projects"
+      className="text-gray-700 lg:max-w-5xl container md:mt-20 mt-8
      mx-auto px-5 py-16"
     >
       <header>
         <SectionHeading heading="Projects" />
-        <p className="md:mt-24 mt-12 mx-auto md:max-w-md max-w-sm">
-          Here are some of the things I&apos;ve built. If you want to see more examples, or peek
+        <p className="mt-16 mx-auto md:max-w-md max-w-sm">
+          Here are some of the things I&apos;ve built. If you want to see more examples or peek
           inside the code,{' '}
           <Link href="https://github.com/DrMalina" text="visit my Github profile." />
         </p>
       </header>
-      <ul className="md:mt-32 mt-24 md:max-w-full max-w-sm mx-auto grid md:grid-cols-2 grid-cols-none gap-x-20 gap-y-24">
+      <ul className="md:mt-16 mt-12 md:max-w-full max-w-sm mx-auto grid md:grid-cols-2 grid-cols-none gap-x-20 gap-y-24">
         {data.allMdx.edges.map((project, idx) => {
           return (
             <SingleProject
