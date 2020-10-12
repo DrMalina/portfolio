@@ -1,5 +1,6 @@
 import React from 'react';
 import { AboutMe } from '../components/AboutMe';
+import { Contact } from '../components/Contact';
 import { Header } from '../components/Header';
 import { HeroSection } from '../components/HeroSection';
 import { Projects } from '../components/Projects';
@@ -15,6 +16,7 @@ function HomePage() {
         <HeroSection />
         <AboutMe />
         <Projects />
+        <Contact />
       </main>
     </>
   );

@@ -27,6 +27,11 @@
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/prop-types": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }]
   }
 }

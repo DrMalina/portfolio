@@ -34,7 +34,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-graphql-codegen`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        codegen: false
+      }
+    }
     // }
     // {
     //   resolve: `gatsby-plugin-manifest`,
