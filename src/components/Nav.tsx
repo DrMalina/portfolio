@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { useMedia } from '../hooks/useMedia';
 
-const navItems = ['home', 'about', 'projects', 'contact'];
+const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
 type NavProps = {
   isMenuOpen: boolean;
@@ -32,7 +32,7 @@ export function Nav({ isMenuOpen }: NavProps) {
       'inline-block w-1/2 py-3': isSmall,
       'p-2': !isSmall,
     },
-    'nav-item hover:text-primary-500',
+    'hover:text-primary-500',
   );
 
   return (
@@ -41,7 +41,7 @@ export function Nav({ isMenuOpen }: NavProps) {
         {navItems.map((tab, idx) => (
           <li key={tab}>
             <a
-              href={`#${tab}`}
+              href={`#${tab.toLowerCase()}`}
               className={cx(
                 {
                   /* exclude margins on first children */
