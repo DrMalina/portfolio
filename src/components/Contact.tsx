@@ -15,7 +15,7 @@ export function Contact() {
         <SectionHeading heading="Contact me" />
         <p className="mt-8 text-lg md:text-left text-center">
           Interested in working toghether?{' '}
-          <span className="font-medium">Feel free to hit me up!</span>
+          <span className="font-medium sm:inline block">Feel free to hit me up!</span>
         </p>
       </header>
       <div className="w-full md:mt-24 mt-10 grid md:grid-cols-2 grid-cols-none">
