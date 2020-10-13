@@ -1,10 +1,23 @@
 const path = require(`path`);
 
+const siteTitle = "Maciej Malinowski Portfolio";
+const siteDescription =
+  "Front end developer portfolio made with Gatsby.js, Typescript and Tailwind CSS by Maciej Malinowski - junior web developer.";
+const siteAuthor = "Maciej Malinowski";
+const siteUrl = "https://localhost:8000/";
+const siteImage = `${siteUrl}/assets/icon512.png`;
+const siteKeywords = ["frontend","front-end","web","developer","junior","portfolio","javascript","html","css","gatsby", "react","tailwind"];
+
 module.exports = {
   siteMetadata: {
-    title: `Maciej Malinowski Portfolio`,
-    description: `Welcome to my personal, front-end developer's portfolio!`,
-    author: `Maciej Malinowski`,
+    title: siteTitle,
+    description: siteDescription,
+    author: siteAuthor,
+    keywords: siteKeywords,
+    language: `en`,
+    url: siteUrl,
+    image: siteImage,
+
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,20 +52,19 @@ module.exports = {
       options: {
         codegen: false
       }
-    }
-    // }
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: siteTitle,
+        short_name: `MM Portfolio`,
+        start_url: `/`,
+        background_color: `#f7fafc`,
+        theme_color: `#8B40FC`,
+        display: `minimal-ui`,
+        icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
