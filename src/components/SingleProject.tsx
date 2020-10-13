@@ -107,7 +107,7 @@ export function SingleProject({ title, body, tags, website, github, img }: Singl
         <div className="flex-1 leading-relaxed text-base mt-2">
           <MDXRenderer>{body}</MDXRenderer>
         </div>
-        <div className="md:mt-6 mt-10 flex md:flex-no-wrap flex-wrap items-center">
+        <div className="md:mt-6 mt-10 flex lg:flex-no-wrap flex-wrap items-center">
           <ProjectTags tags={tags} />
           <ProjectLinks website={website} github={github} title={title} />
         </div>
