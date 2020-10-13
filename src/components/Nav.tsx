@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import { useMedia } from '../hooks/useMedia';
 
 const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
@@ -9,31 +8,20 @@ type NavProps = {
 };
 
 export function Nav({ isMenuOpen }: NavProps) {
-  const isSmall = useMedia('(max-width: 640px)');
-
-  const navClassName = cx({
-    // hide / show dropdown on mobile screens
-    block: isSmall && isMenuOpen,
-    hidden: isSmall && !isMenuOpen,
-    'absolute inset-x-0 top-0 mt-16 mx-auto px-1 bg-gray-100': isSmall,
-    'block ml-auto': !isSmall,
-  });
-
-  const navListClassName = cx(
+  const navClassName = cx(
     {
-      'py-6 flex-col text-center rounded shadow-lg border': isSmall,
-      'flex-wrap items-center': !isSmall,
+      // hide / show dropdown on mobile screens
+      'block absolute inset-x-0 top-0 mt-16 mx-auto px-1 bg-gray-100': isMenuOpen,
+      hidden: !isMenuOpen,
     },
-    'flex justify-center',
+    'sm:ml-auto sm:block',
   );
 
-  const singleTabClassName = cx(
-    {
-      'inline-block w-1/2 py-3': isSmall,
-      'p-2': !isSmall,
-    },
-    'hover:text-primary-500',
-  );
+  const navListClassName =
+    'flex justify-center sm:flex-wrap sm:items-center sm:py-0 py-6 sm:flex-row flex-col sm:text-left text-center rounded sm:shadow-none shadow-lg sm:border-none border';
+
+  const singleTabClassName =
+    'sm:p-2 py-3 sm:block inline-block sm:w-full w-1/2 hover:text-primary-500';
 
   return (
     <nav className={navClassName} aria-label="Main navigation">
@@ -45,8 +33,7 @@ export function Nav({ isMenuOpen }: NavProps) {
               className={cx(
                 {
                   /* exclude margins on first children */
-                  'ml-5': !isSmall && idx !== 0,
-                  'mt-2': isSmall && idx !== 0,
+                  'sm:mt-0 sm:ml-5 mt-2 ml-0': idx !== 0,
                 },
                 singleTabClassName,
               )}
