@@ -1,10 +1,12 @@
 const path = require(`path`);
 
+require(`dotenv`).config({ path: '.env' });
+
 const siteTitle = "Maciej Malinowski Portfolio";
 const siteDescription =
   "Front end developer portfolio made with Gatsby.js, Typescript and Tailwind CSS by Maciej Malinowski - junior web developer.";
 const siteAuthor = "Maciej Malinowski";
-const siteUrl = "https://localhost:8000/";
+const siteUrl = "https://m-malinowski.me";
 const siteImage = `${siteUrl}/assets/icon512.png`;
 const siteKeywords = ["frontend","front-end","web","developer","junior","portfolio","javascript","html","css","gatsby", "react","tailwind"];
 
@@ -57,7 +59,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        codegen: false
+        codegen: false // change to true if you want to re-run types gen on build
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        head: true,
       }
     },
     {
