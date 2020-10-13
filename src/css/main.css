@@ -1,14 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @layer base {
   @font-face {
     font-family: 'Jost', sans-serif;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 
   body {
@@ -22,16 +17,8 @@
   }
 }
 
-/* nav {
-  counter-reset: nav;
-}
+@tailwind utilities;
 
-.nav-item {
-  counter-increment: nav;
+html {
+  scroll-behavior: smooth;
 }
-
-.nav-item::before {
-  content: '0' counter(nav) '.';
-  margin-right: 5px;
-  color: #8a3ffc;
-} */
