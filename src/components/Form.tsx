@@ -51,19 +51,49 @@ type FormData = {
 
 type FormStatus = 'idle' | 'resolved' | 'error';
 
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+};
+
 export function Form() {
   const { register, handleSubmit, errors, reset } = useForm<FormData>();
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    setFormStatus('resolved');
-    reset();
+
+  const onSubmit = (data: FormData, event?: React.BaseSyntheticEvent) => {
+    if (event) {
+      event.preventDefault();
+    }
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...data }),
+    })
+      .then(() => {
+        setFormStatus('resolved');
+        reset();
+      })
+      .catch((error) => {
+        setFormStatus('error');
+        console.log('Error: ', error);
+      });
   };
 
   return (
     <>
       {formStatus !== 'idle' && <FormNotification status={formStatus} />}
-      <form className="flex flex-wrap -m-2" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        method="post"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="contact"
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-wrap -m-2"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <FormInput
           id="name"
           placeholder="Name"
