@@ -35,7 +35,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="text-gray-700 lg:max-w-5xl container md:mt-20 mt-8
+      className="text-gray-700 lg:max-w-5xl container md:mt-16 mt-8
      mx-auto px-5 py-16"
     >
       <header>

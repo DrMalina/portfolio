@@ -64,16 +64,17 @@ function Introduction() {
           👋
         </span>
       </p>
-      <p className="mt-1">
+      <p className="md:mt-2 mt-4">
         I’m <span className="font-bold">Maciej Malinowski</span>, a self-taught web developer from
         Wrocław, Poland.
       </p>
       <p className="md:mt-4 mt-10">
         As a student majoring in business, I have discovered an interest in programming during my
-        semester abroad in the UK. Since then, I have been focusing on{' '}
-        <span className="font-bold">web technologies</span>, enhancing my coding skills by taking
-        many courses and building a variety of projects - most of them are personal although I have
-        some experience with <span className="underline">commercial and collaborative tasks.</span>
+        semester abroad in the <Abbr title="United Kingdom" text="UK" />. Since then, I have been
+        focusing on <span className="font-bold">web technologies</span>, enhancing my coding skills
+        by taking many courses and building a variety of projects - most of them are personal
+        although I have some experience with{' '}
+        <span className="underline">commercial and collaborative tasks.</span>
       </p>
     </>
   );
@@ -87,14 +88,11 @@ function FunFact() {
       </h3>
       <div className="flex flex-wrap items-center">
         <p className="md:mt-4 mt-6 w-full italic">
-          Besides programming, my hobby is also <span className="font-medium">diving</span> - I am a
-          certfified <Abbr text="PADI" title="Professional Association of Diving Instructors" />{' '}
-          scuba diver which means that I often code underwater{' '}
-          <span role="img" aria-label="Smiley face">
-            :&#x29;
-          </span>
+          Besides programming, my other hobby is <span className="font-medium">diving</span> - since
+          2018 I have been a certfified <Abbr text="OW" title="Open Water" /> diver which allows me
+          to go and explore the underwater world in my free time.
         </p>
-        <img className="ml-auto md:pr-0 pr-2 w-12 h-12" src={divingImg} alt="" />
+        <img className="ml-auto md:mt-4 md:pr-0 pr-2 w-12 h-12" src={divingImg} alt="" />
       </div>
     </>
   );
