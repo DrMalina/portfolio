@@ -2,13 +2,13 @@ const path = require(`path`);
 
 require(`dotenv`).config({ path: '.env' });
 
-const siteTitle = "Maciej Malinowski Portfolio";
+const siteTitle = "Maciej Malinowski | Front-end Developer";
 const siteDescription =
-  "Front end developer portfolio made with Gatsby.js, Typescript and Tailwind CSS by Maciej Malinowski - junior web developer.";
+  "Junior front-end developer portfolio made by Maciej Malinowski.";
 const siteAuthor = "Maciej Malinowski";
 const siteUrl = "https://m-malinowski.me";
-const siteImage = `${siteUrl}/assets/icon512.png`;
-const siteKeywords = ["frontend","front-end","web","developer","junior","portfolio","javascript","html","css","gatsby", "react","tailwind"];
+const siteImage = `${siteUrl}/images/OG.png`;
+const siteKeywords = ["front end","front-end","web","developer","junior","portfolio","javascript","html","css","gatsby", "react","tailwind"];
 
 module.exports = {
   siteMetadata: {

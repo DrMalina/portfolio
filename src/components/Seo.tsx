@@ -51,23 +51,23 @@ export function SEO(props: SEOProps) {
       content: siteImage,
     },
     {
-      name: 'og:url',
+      property: 'og:url',
       content: siteUrl,
     },
     {
-      name: 'og:type',
+      property: 'og:type',
       content: 'article',
     },
     {
-      name: 'og:title',
+      property: 'og:title',
       content: siteTitle,
     },
     {
-      name: 'og:description',
+      property: 'og:description',
       content: siteDescription,
     },
     {
-      name: 'og:image',
+      property: 'og:image',
       content: siteImage,
     },
     {
@@ -96,12 +96,5 @@ export function SEO(props: SEOProps) {
     },
   ].concat(meta);
 
-  return (
-    <Helmet
-      htmlAttributes={{ lang: 'en' }}
-      title={siteTitle}
-      // titleTemplate={`%s | ${siteTemplate}`}
-      meta={metaData}
-    />
-  );
+  return <Helmet htmlAttributes={{ lang: 'en' }} title={siteTitle} meta={metaData} />;
 }
