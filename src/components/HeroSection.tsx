@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as InternalLink } from 'react-scroll';
 import heroImg from '../assets/hero-img.svg';
 import iconRocket from '../assets/rocket.svg';
 
@@ -20,19 +21,23 @@ export function HeroSection() {
             />
           </p>
           <div className="flex xl:flex-row flex-col justify-center">
-            <a
+            <InternalLink
               href="#about"
-              className="inline-flex text-white bg-primary-500 border-0 py-2 px-6 hover:bg-primary-600 rounded
-              text-lg"
+              to="about"
+              smooth
+              className="inline-flex text-white bg-primary-500 py-2 px-6 hover:bg-primary-600 rounded
+              text-lg cursor-pointer border border-dashed border-transparent focus:border-yellow-500"
             >
               Learn more about me
-            </a>
-            <a
+            </InternalLink>
+            <InternalLink
               href="#projects"
-              className="xl:ml-4 xl:mt-0 ml-0 mt-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 hover:bg-gray-300 rounded text-lg"
+              to="projects"
+              smooth
+              className="xl:ml-4 xl:mt-0 ml-0 mt-4 inline-flex text-gray-700 bg-gray-300 border-0 py-2 px-6 hover:bg-gray-400 rounded text-lg cursor-pointer"
             >
               Check out my work
-            </a>
+            </InternalLink>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full w-5/6">
