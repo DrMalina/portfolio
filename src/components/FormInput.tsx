@@ -37,7 +37,7 @@ type InputValidation = {
 type FormInputProps = {
   id: string;
   type?: 'text' | 'email';
-  placeholder: string;
+  placeholder?: string;
   label: string;
   error?: FieldError;
   register: ReturnType<typeof useForm>['register'];
@@ -93,7 +93,7 @@ export function FormInput({
 
   return (
     <div className={containerClassName}>
-      <label htmlFor={id} className="sr-only">
+      <label htmlFor={id} className="text-sm">
         {label}:
       </label>
       {body}

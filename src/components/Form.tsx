@@ -92,20 +92,21 @@ export function Form() {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-wrap -m-2"
       >
+        {/* Netlify inputs */}
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <FormInput
           id="name"
-          placeholder="Name"
           label="Name"
+          placeholder="e.g. Dan Abramov"
           error={errors.name}
           register={register}
           validation={{ required: true, maxLength: 70 }}
         />
         <FormInput
           id="email"
-          placeholder="Email"
           label="Email"
+          placeholder="e.g. name@mail.com"
           error={errors.email}
           register={register}
           validation={{ required: true, maxLength: 255, pattern: REGEX_EMAIL }}
