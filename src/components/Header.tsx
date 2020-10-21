@@ -13,7 +13,7 @@ export function Header() {
         <div className="relative flex items-center">
           <Logo />
           <MenuToggle isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-          <Nav isMenuOpen={isMenuOpen} />
+          <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
       </div>
     </header>

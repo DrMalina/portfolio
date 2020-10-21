@@ -5,9 +5,10 @@ const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
 type NavProps = {
   isMenuOpen: boolean;
+  setIsMenuOpen: () => void;
 };
 
-export function Nav({ isMenuOpen }: NavProps) {
+export function Nav({ isMenuOpen, setIsMenuOpen }: NavProps) {
   const navClassName = cx(
     {
       // hide / show dropdown on mobile screens
@@ -30,6 +31,7 @@ export function Nav({ isMenuOpen }: NavProps) {
           <li key={tab}>
             <a
               href={`#${tab.toLowerCase()}`}
+              onClick={setIsMenuOpen}
               className={cx(
                 {
                   /* exclude margins on first children */
