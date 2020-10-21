@@ -123,7 +123,7 @@ export function Form() {
         <div className="w-full mt-8">
           <button
             type="submit"
-            className="flex mx-auto text-white bg-primary-500 border-0 py-2 px-8 focus:outline-none hover:bg-primary-600 rounded text-lg"
+            className="flex mx-auto text-white bg-primary-500 py-2 px-8 border border-dashed border-transparent focus:border-yellow-500 hover:bg-primary-600 rounded text-lg"
           >
             Send message
           </button>
