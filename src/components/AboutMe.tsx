@@ -73,8 +73,7 @@ function Introduction() {
         semester abroad in the <Abbr title="United Kingdom" text="UK" />. Since then, I have been
         focusing on <span className="font-bold">web technologies</span>, enhancing my coding skills
         by taking many courses and building a variety of projects - most of them are personal
-        although I have some experience with{' '}
-        <span className="underline">commercial and collaborative tasks.</span>
+        although I have some experience with commercial and collaborative tasks.
       </p>
     </>
   );
