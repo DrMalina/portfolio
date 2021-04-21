@@ -50,6 +50,7 @@ function TechnologyStack() {
         <ListItem text="React + Redux" />
         <ListItem text="Gatsby.js" />
         <ListItem text="GraphQL" />
+        <ListItem text="Next.js" />
       </ul>
     </>
   );
